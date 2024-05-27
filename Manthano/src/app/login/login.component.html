@@ -1,0 +1,28 @@
+<app-cadastro
+    titulo=" Entre na sua conta"
+    primeirobotao="Entrar"
+    segundobotao="Cadastre-se"
+    (submit)="submit()"
+    (navigate)="navigate()"
+>
+    <form [formGroup]="loginForm">
+        <app-informacoes
+            formControlName="email"
+            inputName="email"
+            type="email"
+            label="Email"
+            placeholder="fulano@gmail.com"
+        >
+        </app-informacoes>
+
+        <app-informacoes
+            formControlName="password"
+            inputName="password"
+            type="password"
+            label="Senha"
+        >
+        </app-informacoes>
+        <span>Esqueceu sua senha?</span>
+        
+    </form>
+</app-cadastro>
